@@ -5,6 +5,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="System.IO.Pipelines" Version="7.0.0-preview.5.22301.12" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Helium.Api\Helium.Api.csproj" />
   </ItemGroup>
 

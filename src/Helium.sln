@@ -84,7 +84,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helium.Data.Abstraction", "
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helium.Data.Nbt", "Helium.Data.Nbt\Helium.Data.Nbt.csproj", "{A81E294D-143F-43E9-9B44-F4D972455289}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Helium.Data.Castle", "Helium.Data.Castle\Helium.Data.Castle.csproj", "{F4954823-97EE-4EDE-A238-449FD3EC3141}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Helium.Data.Castle", "Helium.Data.Castle\Helium.Data.Castle.csproj", "{F4954823-97EE-4EDE-A238-449FD3EC3141}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

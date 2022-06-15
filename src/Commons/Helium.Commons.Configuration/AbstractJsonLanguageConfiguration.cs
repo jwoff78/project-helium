@@ -1,10 +1,10 @@
-﻿using System;
-using System.IO;
-
-using Newtonsoft.Json;
-
 namespace Helium.Commons.Configuration
 {
+	/* 'using' directive placement (IDE0065) */
+	using System;
+	using System.IO;
+
+	using Newtonsoft.Json;
 
 	/// <summary>
 	/// Part of the Helium Toolchain API. Abstract base class for JSON-serialized Language configurations

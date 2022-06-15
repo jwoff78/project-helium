@@ -1,10 +1,11 @@
-﻿using System;
-using System.IO;
-
-using Newtonsoft.Json;
-
 namespace Helium.Commons.Configuration
 {
+	/* 'using' directive placement (IDE0065) */
+	using System;
+	using System.IO;
+
+	using Newtonsoft.Json;
+
 	public abstract class AbstractJsonGenericConfiguration : AbstractGenericConfiguration
 	{
 		public override void Serialize()

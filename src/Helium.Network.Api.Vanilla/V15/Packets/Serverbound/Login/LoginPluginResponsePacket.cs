@@ -1,4 +1,4 @@
-﻿namespace Helium.Network.Api.Vanilla.V15.Packets.Serverbound.Login;
+namespace Helium.Network.Api.Vanilla.V15.Packets.Serverbound.Login;
 
 using System;
 
@@ -45,8 +45,14 @@ public struct LoginPluginResponsePacket : IPacket
 		stream.WriteByteArray(AdditionalData);
 	}
 
+	/*
+	 * For reference, I am having to put a constuctor here because you can se a field initial initializer without creating a constructor
+	 */
 	public LoginPluginResponsePacket(Int32 packetLength)
 	{
 		this.PacketLength = packetLength;
+		this.MessageId = default;
+		this.Success = default;
+		this.AdditionalData = default;
 	}
 }

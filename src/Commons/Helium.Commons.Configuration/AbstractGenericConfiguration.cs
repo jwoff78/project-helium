@@ -1,8 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-
 namespace Helium.Commons.Configuration
 {
+	/* 'using' directive placement (IDE0065) */
+	using System;
+	using System.Collections.Generic;
+
 	/// <summary>
 	/// Part of the Helium Toolchain API. Serves as base class for generic configurations.
 	/// </summary>

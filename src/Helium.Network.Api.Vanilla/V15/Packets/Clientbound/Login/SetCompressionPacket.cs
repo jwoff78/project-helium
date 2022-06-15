@@ -1,4 +1,4 @@
-﻿namespace Helium.Network.Api.Vanilla.V15.Packets.Clientbound.Login;
+namespace Helium.Network.Api.Vanilla.V15.Packets.Clientbound.Login;
 
 using Helium.Api.Mojang;
 
@@ -25,4 +25,10 @@ public struct SetCompressionPacket : IPacket
 		stream.WriteVarInt(Id);
 		stream.WriteVarInt(0x00);
 	}
+
+	/*
+	 * For reference, I am having to put a constuctor here because you can se a field initial initializer without creating a constructor
+	 */
+	public SetCompressionPacket() { }
+
 }

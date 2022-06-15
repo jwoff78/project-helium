@@ -1,10 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.Immutable;
-using System.Linq;
-
 namespace Helium.Commons.Configuration
 {
+	/* 'using' directive placement (IDE0065) */
+	using System;
+	using System.Collections.Generic;
+	using System.Collections.Immutable;
+	using System.Linq;
+
 	/// <summary>
 	/// Part of the Helium Toolchain API. This interface defines all methods and fields a configuration needs to define.
 	/// Serialization attributes like [JsonIgnore] or [JsonProperty] should be defined in the inheriting class(es)

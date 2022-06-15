@@ -1,4 +1,4 @@
-﻿namespace Helium.Network.Api.Vanilla.V15.Packets.Serverbound.Handshake;
+namespace Helium.Network.Api.Vanilla.V15.Packets.Serverbound.Handshake;
 
 using System;
 using System.Diagnostics.CodeAnalysis;
@@ -30,5 +30,13 @@ public struct LegacyServerListPingPacket : ILegacyPacket
 	{
 		stream.WriteUnsignedByte(Id);
 		stream.WriteUnsignedByte(Payload);
+	}
+
+	/*
+	 * For reference, I am having to put a constuctor here because you can se a field initial initializer without creating a constructor
+	 */
+	public LegacyServerListPingPacket()
+	{
+		this.Payload = default;
 	}
 }

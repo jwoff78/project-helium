@@ -1,10 +1,8 @@
-﻿
+namespace Helium.Core.World.Environment.Block;
+
 using Helium.Api.Primitives.Environment;
 
-namespace Helium.Core.World.Environment.Block
+public interface IBlock : IHeliumServerBlock
 {
-	public interface IBlock : IHeliumServerBlock
-	{
 
-	}
 }

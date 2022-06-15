@@ -1,4 +1,4 @@
-﻿namespace Helium.Network.Api.Vanilla.V15.Packets.Serverbound.Handshake;
+namespace Helium.Network.Api.Vanilla.V15.Packets.Serverbound.Handshake;
 
 using System;
 
@@ -46,5 +46,16 @@ public struct HandshakePacket : IPacket
 		stream.WriteString(Address);
 		stream.WriteUInt16(Port);
 		stream.WriteVarInt(NextState);
+	}
+
+	/*
+	 * For reference, I am having to put a constuctor here because you can se a field initial initializer without creating a constructor
+	 */
+	public HandshakePacket()
+	{
+		this.ProtocolVersion = default;
+		this.NextState = default;
+		this.Port = default;
+		this.Address = default;
 	}
 }

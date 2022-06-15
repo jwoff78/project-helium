@@ -1,4 +1,4 @@
-﻿namespace Helium.Network.Api.Vanilla.V15.Packets.Clientbound.Login;
+namespace Helium.Network.Api.Vanilla.V15.Packets.Clientbound.Login;
 
 using System;
 using System.Runtime.CompilerServices;
@@ -64,5 +64,17 @@ public struct EncryptionRequestPacket : IPacket
 		stream.WriteByteArray(PublicKey);
 		stream.WriteVarInt(VerifyTokenLength);
 		stream.WriteByteArray(VerifyToken);
+	}
+
+	/*
+	 * For reference, I am having to put a constuctor here because you can se a field initial initializer without creating a constructor
+	 */
+	public EncryptionRequestPacket()
+	{
+		this.PublicKeyLength = default;
+		this.VerifyTokenLength = default;
+		this.PublicKey = default;
+		this.VerifyToken = default;
+		this.ServerId = default;
 	}
 }

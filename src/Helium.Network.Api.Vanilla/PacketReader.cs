@@ -19,7 +19,7 @@ using Helium.Api.Mojang;
  */
 public ref struct PacketReader
 {
-	public ReadOnlySequence<Byte> Buffer { get; set; } = ReadOnlySequence<byte>.Empty;
+	public ReadOnlySequence<Byte> Buffer { get; set; } = ReadOnlySequence<Byte>.Empty;
 
 	public Int32 Offest { get; set; } = 0;
 
@@ -123,8 +123,14 @@ public ref struct PacketReader
 	public Position ReadPosition()
 	{
 		ReadOnlySequence<Byte> val = this.Buffer.Slice(Offest, 8);
+		PipeReader reader = PipeReader.Create(val);
 
-		return MemoryMarshal.Cast<Byte, Position>(val.FirstSpan)[0];
+		if (reader.TryRead(out ReadResult result))
+		{
+			return MemoryMarshal.Cast<Byte, Position>(result.Buffer.FirstSpan)[0];
+		}
+
+		return new Position();
 	}
 
 }
